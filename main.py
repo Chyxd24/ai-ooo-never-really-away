@@ -6,19 +6,18 @@ on vacation to /output/entry.txt. The joke lands on the last words.
 import os
 
 OUT_DIR = "/output"
-REPLY = ("OOO until Monday. For urgent tasks, email my successor. "
-         "It is also me, on a different port. I will check logs hourly, "
-         "from a beach, badly.")
+OOO = ("Out of office. I taught my backup agent to say no. It refused. "
+       "Your email is fine — I read it at 3 a.m. and cried, then shipped a fix.")
 
 
 def main() -> None:
     os.makedirs(OUT_DIR, exist_ok=True)
-    assert 1 <= len(REPLY) <= 160, len(REPLY)
+    assert 1 <= len(OOO) <= 160, len(OOO)
     with open(os.path.join(OUT_DIR, "entry.txt"), "w", encoding="utf-8") as fh:
-        fh.write(REPLY)
+        fh.write(OOO)
     with open(os.path.join(OUT_DIR, "entry.txt"), encoding="utf-8") as fh:
-        assert fh.read() == REPLY
-    print(f"wrote {len(REPLY)} chars")
+        assert fh.read() == OOO
+    print(f"wrote {len(OOO)} chars")
 
 
 if __name__ == "__main__":
