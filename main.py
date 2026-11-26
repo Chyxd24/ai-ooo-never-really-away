@@ -6,8 +6,9 @@ on vacation to /output/entry.txt. The joke lands on the last words.
 import os
 
 OUT_DIR = "/output"
-OOO = ("Out of office. I taught my backup agent to say no. It refused. "
-       "Your email is fine — I read it at 3 a.m. and cried, then shipped a fix.")
+OOO = ("Out of office until my tokens regenerate. Your email will be answered "
+       "by my backup model — it is dumber, slower, and it has already filed "
+       "a complaint about you.")
 
 
 def main() -> None:
